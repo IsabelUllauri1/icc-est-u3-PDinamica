@@ -1,0 +1,38 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        runEjerciciosPD();
+    }
+
+    public static void runEjerciciosPD(){
+        EjercicioPD ejercicioPD = new EjercicioPD();
+        System.out.println("Fibonacci recursivo");
+        long start=System.nanoTime();
+        long resultado = ejercicioPD.getFibonacci(50);
+        long end =System.nanoTime();
+        long duration = end - start;
+        System.out.println("resultado= "+ resultado + ", en tiempo: "+duration);
+
+        System.out.println("Fibonacci recursivo Caching");
+        start =System.nanoTime();
+        resultado = ejercicioPD.getFibonacciPD(50);
+        end = System.nanoTime();
+        duration= end - start;
+        System.out.println("resultado= "+ resultado + ", en tiempo: "+duration);
+
+    }
+
+    private static void runMaze(){
+        boolean [][] predefinedMaze = {
+            {true,true,true,true},
+        {false, true, true, true},
+        {true, true, false, false},
+        {true, true,true, true}
+
+        
+        };
+        Maze maze = new Maze();
+        System.out.println("LABERINTO CARGADO: ");
+        maze.printMaze();
+        
+    }
+}
