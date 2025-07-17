@@ -5,6 +5,7 @@ Este proyecto implementa dos algoritmos fundamentales:
 2. **Resolución de laberintos** utilizando un algoritmo recursivo de backtracking.
 
 ## 📁 Estructura del Proyecto
+```
 
 ├── App.java # Clase principal que ejecuta los ejercicios
 ├── EjercicioPD.java # Algoritmos para calcular Fibonacci (recursivo y con caché)
@@ -13,6 +14,7 @@ Este proyecto implementa dos algoritmos fundamentales:
 ├── MazeSolverRecursive.java # Solución recursiva básica
 ├── MazeSolverRecursiveComp.java # Solución recursiva completa (más robusta)
 ├── Cell.java # Clase auxiliar que representa una celda (fila, columna)
+```
 
 
 ## 🚀 Cómo Ejecutar
