@@ -52,12 +52,10 @@ public class App {
 
 
         //compl
-        System.out.println("\nCamino encontrado (4 direcciones)");
-        if (path.isEmpty()) {
-            System.out.println("No se encontró camino");
-        } else {
-            System.out.println(path);
-        }
+        System.out.println("\nCamino encontrado recursivo completo: ");
+        MazeSolver solverComplete = solverS.get(0);
+        path = solverComplete.getPath(maze.getGrid(),start,end);
+        System.out.println(path);
 
     }
 }

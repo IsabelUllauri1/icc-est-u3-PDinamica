@@ -19,38 +19,31 @@ public class MazeSolverRecursive implements MazeSolver {
         //return Path;  (solicitadas)
     }
 
-    private boolean findPath(boolean[][] grid, Cell current, Cell end, List<Cell> path) {
-    int row = current.getRow();
-    int col = current.getCol();
+    private boolean findPath(boolean[][] grid, Cell star, Cell end, List<Cell> path){
+        int row = star.row;
+        int col =  star.col;
 
-    // Verifica fuera de límites o bloqueado
-    if (row < 0 || col < 0 || row >= grid.length || col >= grid[0].length || !grid[row][col]) {
+        // condiciones 1. que este dentro del maze, 2. que sea true
+        if(row>= grid.length|| col>= grid[0].length|| !grid [row][col]){
+            return false;
+        }
+        if(row == end.row && col==end.col){
+            path.add(star);
+         return true;
+        }
+        if(findPath(grid, new Cell(row+1, col), end, path)){
+            path.add(star);
+            return true;
+
+        }
+        if(findPath(grid, new Cell(row, col+1), end, path)){
+            path.add(star);
+            return true;
+
+        }
+
         return false;
     }
-
-    // Marca como visitado
-    grid[row][col] = false;
-
-    if (row == end.getRow() && col == end.getCol()) {
-        path.add(current);
-        return true;
-    }
-
-    // Movimiento en las 4 direcciones
-    Cell[] directions = {
-        new Cell(row + 1, col), new Cell(row - 1, col),
-        new Cell(row, col + 1), new Cell(row, col - 1)
-    };
-
-    for (Cell next : directions) {
-        if (findPath(grid, next, end, path)) {
-            path.add(current);
-            return true;
-        }
-    }
-
-    return false;
-}
 
 
 }
