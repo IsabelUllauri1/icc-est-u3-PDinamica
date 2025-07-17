@@ -37,11 +37,10 @@ getFibonacciPD(n)
 Versión optimizada con programación dinámica (memoización). Es mucho más rápida al almacenar subproblemas previamente calculados.
 
 Ejemplo de ejecución
-java
-Copiar
-Editar
+```
 getFibonacci(50);       // Recursivo lento
 getFibonacciPD(100);    // Con cache rápida
+```
 
 ## 🧭 Módulo 2: Resolución de Laberinto
 Archivos relacionados:
@@ -49,9 +48,9 @@ Maze.java, MazeSolverRecursive.java, MazeSolverRecursiveComp.java, Cell.java
 
 Este módulo resuelve laberintos representados como una matriz de booleanos, donde:
 
-true representa un camino válido.
+- true representa un camino válido.
 
-false representa un obstáculo o pared.
+- false representa un obstáculo o pared.
 
 El algoritmo implementa backtracking recursivo para encontrar un camino desde una celda de inicio hasta una celda destino.
 
