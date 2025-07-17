@@ -55,11 +55,13 @@ El algoritmo implementa backtracking recursivo para encontrar un camino desde un
 
 Ejemplo de Laberinto
 Visualización por consola:
-
+```
  -  -  -  -
  *  -  -  -
  -  -  *  *
  -  -  -  -
+```
+
 Leyenda:
 
 - camino permitido (true)
